@@ -7,7 +7,8 @@ secrets = toml.load(".streamlit/secrets.toml")
 
 st.title("Chat Bot with OpenRouter")
 
-api_key = secrets["API_KEY"]
+api_key = st.text_input("Type your openrouter api key", type="password")
+
 app_name = 'Chatbot with OpenRouter'
 
 if "messages" not in st.session_state:
